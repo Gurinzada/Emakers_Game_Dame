@@ -1,3 +1,11 @@
 {
-    "users":[]
+  "users": [
+    {
+      "id": "df53",
+      "UserName": "Augusto",
+      "Email": "novoemail@email.com",
+      "CPF": 14367420647,
+      "Password": "123"
+    }
+  ]
 }
