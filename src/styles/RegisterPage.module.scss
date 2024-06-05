@@ -1,9 +1,10 @@
+
 .Wrapper{
-    background-color: #fbf7f3;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 1rem;
+    gap: 3rem;
+    overflow-x: hidden;
 }
 
 .WrapperForm{
@@ -47,10 +48,12 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .WizardImg{
-    width: 50rem;
+    top: -8.75rem;
+   position: absolute;
 }
 
 .WrapperLink{

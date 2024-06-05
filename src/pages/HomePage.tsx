@@ -6,6 +6,7 @@ import game1 from "../imgs/Rectangle 23.png"
 import game2 from "../imgs/Rectangle 24.png"
 import game3 from "../imgs/Rectangle 25.png"
 import game4 from "../imgs/Rectangle 26.png"
+import Cart from "../imgs/Group 20.svg"
 
 const HomePage = () => {
     const [infosUser, setInfosUser] = useState<User | null>(null)
@@ -37,7 +38,7 @@ const HomePage = () => {
                     <h1>Olá, {`<<${infosUser?.UserName}>>`}</h1>
                     <div>
                         <p>Seu email é {`${infosUser?.Email}`}</p>
-                        <p>Seu CPF é ${`${infosUser?.CPF}`}</p>
+                        <p>Seu CPF é {`${infosUser?.CPF}`}</p>
                     </div>
                     <div>
                         <button>Alterar Dados</button>
@@ -48,10 +49,25 @@ const HomePage = () => {
                 <section>
                     <h3>Jogos adquiridos:</h3>
                     <div>
-                        <img src={game1} alt="" />
-                        <img src={game2} alt="" />
-                        <img src={game3} alt="" />
-                        <img src={game4} alt="" />
+                        <div>
+                            <img src={game1} alt="" />
+                            <p>100/100</p>
+                        </div>
+                        <div>
+                            <img src={game2} alt="" />
+                            <p>95/100</p>
+                        </div>
+                        <div>
+                            <img src={game3} alt="" />
+                            <p>75/100</p>
+                        </div>
+                        <div>
+                            <img src={game4} alt="" />
+                            <p>Adicionar avaliação</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src={Cart} alt="" />
                     </div>
                 </section>
             </main>

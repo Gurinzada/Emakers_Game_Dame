@@ -8,7 +8,13 @@ export interface User{
 
 export async function getDataById(id:string|undefined){
     const response = await fetch(`http://localhost:3000/users/${id}`)
-    const data = response.json()
+    const data:User = await response.json()
+    return data
+}
+
+export async function getAllDatas() {
+    const response = await fetch(`http://localhost:3000/users`)
+    const data:User = await response.json()
     return data
 }
 

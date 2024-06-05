@@ -5,6 +5,7 @@ import styles from "../styles/RegisterPage.module.scss"
 import { useState } from "react"
 import { ConfirmCPF, User } from "../services/user"
 import { useAuth } from "../context/AuthProvider"
+import usePasswordToggle from "../hooks/usePasswordToggle"
 
 const RegisterPage = () => {
     const [userName, setUserName] = useState<string>(``)
@@ -14,6 +15,7 @@ const RegisterPage = () => {
     const [passwordConfirmation, setPasswordConfirmation] = useState<string>(``)
     const {login} = useAuth()
     const navigate = useNavigate()
+    const {type, focusInputPassword, blurPassword} = usePasswordToggle()
 
     const handleSubmit = async (e:React.FormEvent) => {
         e.preventDefault()
@@ -65,7 +67,7 @@ const RegisterPage = () => {
                         <input type="number" minLength={11} maxLength={11} required placeholder="CPF" className={styles.Input} value={CPF} onChange={(e) => setCPF(Number(e.target.value))}/>
                     </div>
                     <div>
-                        <input type="password" placeholder="Senha" className={styles.Input} value={password} onChange={(e) => setPassowrd(e.target.value)}/>
+                        <input type={type} placeholder="Senha" className={styles.Input} value={password} onChange={(e) => setPassowrd(e.target.value)} onFocus={focusInputPassword} onBlur={blurPassword}/>
                     </div>
                     <div>
                         <input type="password" placeholder="Confirmar Senha" className={styles.Input} value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
