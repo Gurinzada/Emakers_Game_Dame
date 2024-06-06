@@ -64,7 +64,7 @@ const RegisterPage = () => {
                         <input type="email" placeholder="E-mail" required className={styles.Input} value={userEmail} onChange={(e) => setUserEmail(e.target.value)}/>
                     </div>
                     <div>
-                        <input type="number" minLength={11} maxLength={11} required placeholder="CPF" className={styles.Input} value={CPF} onChange={(e) => setCPF(Number(e.target.value))}/>
+                        <input minLength={11} maxLength={11} required placeholder="CPF" className={styles.Input} value={CPF} onChange={(e) => setCPF(Number(e.target.value))}/>
                     </div>
                     <div>
                         <input type={type} placeholder="Senha" className={styles.Input} value={password} onChange={(e) => setPassowrd(e.target.value)} onFocus={focusInputPassword} onBlur={blurPassword}/>
